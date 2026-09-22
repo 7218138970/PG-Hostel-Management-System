@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Add Room</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>🏠 Smart PG</h2>
+
+    <a href="/">Dashboard</a>
+
+    <a href="/students">
+        👨‍🎓 Students
+    </a>
+
+    <a class="active" href="/rooms">
+        🏠 Rooms
+    </a>
+
+</div>
+
+
+<div class="main">
+
+    <div class="form-container">
+
+        <h1>Add New Room</h1>
+
+        <p>
+            Enter room details
+        </p>
+
+
+        <form
+            method="POST"
+            action="/rooms"
+        >
+
+            <div class="form-grid">
+
+
+                <div class="input-group">
+
+                    <label>Room Number</label>
+
+                    <input
+                        type="text"
+                        name="room_number"
+                        placeholder="Example: 301"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Floor</label>
+
+                    <input
+                        type="number"
+                        name="floor"
+                        placeholder="Example: 3"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Room Type</label>
+
+                    <select name="room_type">
+
+                        <option value="Single Sharing">
+                            Single Sharing
+                        </option>
+
+                        <option value="2 Sharing">
+                            2 Sharing
+                        </option>
+
+                        <option value="3 Sharing">
+                            3 Sharing
+                        </option>
+
+                        <option value="4 Sharing">
+                            4 Sharing
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Capacity</label>
+
+                    <input
+                        type="number"
+                        name="capacity"
+                        placeholder="Example: 2"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Monthly Rent</label>
+
+                    <input
+                        type="number"
+                        name="rent"
+                        placeholder="Example: 7000"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Status</label>
+
+                    <select name="status">
+
+                        <option value="Available">
+                            Available
+                        </option>
+
+                        <option value="Occupied">
+                            Occupied
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-buttons">
+
+                <a href="/rooms">
+                    Cancel
+                </a>
+
+                <button type="submit">
+                    Add Room
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Smart PG & Hostel</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>🏠 Smart PG</h2>
+
+    <a href="/">Dashboard</a>
+
+    <a href="/students">👨‍🎓 Students</a>
+
+    <a href="/rooms">🏠 Rooms</a>
+
+    <a href="#">🛏️ Beds</a>
+
+    <a href="#">💰 Payments</a>
+
+    <a href="#">🛠️ Complaints</a>
+
+    <a href="#">👥 Visitors</a>
+
+</div>
+
+
+<div class="main">
+
+    <div class="topbar">
+
+        <div>
+
+            <h1>Dashboard</h1>
+
+            <p>
+                Smart PG & Hostel Management System
+            </p>
+
+        </div>
+
+        <div class="admin">
+            👤 Admin
+        </div>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                👨‍🎓
+            </div>
+
+            <div>
+
+                <h3>
+                    <%= totalStudents %>
+                </h3>
+
+                <p>
+                    Total Students
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                🏠
+            </div>
+
+            <div>
+
+                <h3>
+                    <%= totalRooms %>
+                </h3>
+
+                <p>
+                    Total Rooms
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                🛠️
+            </div>
+
+            <div>
+
+                <h3>
+                    <%= totalComplaints %>
+                </h3>
+
+                <p>
+                    Complaints
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                💰
+            </div>
+
+            <div>
+
+                <h3>
+                    <%= totalPayments %>
+                </h3>
+
+                <p>
+                    Payments
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="welcome">
+
+        <h2>Welcome to Smart PG 👋</h2>
+
+        <p>
+            Manage students, rooms, payments,
+            complaints and visitors from one place.
+        </p>
+
+        <div class="quick-buttons">
+
+            <a href="/students/new">
+                ➕ Add Student
+            </a>
+
+            <a href="/rooms/new">
+                🏠 Add Room
+            </a>
+
+            <a href="/students">
+                👨‍🎓 View Students
+            </a>
+
+            <a href="/rooms">
+                🏠 View Rooms
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

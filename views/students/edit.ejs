@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Edit Student</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>🏠 Smart PG</h2>
+
+    <a href="/">Dashboard</a>
+
+    <a class="active" href="/students">
+        👨‍🎓 Students
+    </a>
+
+    <a href="/rooms">🏠 Rooms</a>
+
+</div>
+
+
+<div class="main">
+
+    <div class="form-container">
+
+        <h1>Edit Student</h1>
+
+        <p>
+            Update student information
+        </p>
+
+
+        <form
+            method="POST"
+            action="/students/<%= student.student_id %>?_method=PUT"
+        >
+
+            <div class="form-grid">
+
+
+                <div class="input-group">
+
+                    <label>Name</label>
+
+                    <input
+                        type="text"
+                        name="name"
+                        value="<%= student.name %>"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        name="email"
+                        value="<%= student.email %>"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Phone</label>
+
+                    <input
+                        type="text"
+                        name="phone"
+                        value="<%= student.phone %>"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Gender</label>
+
+                    <select name="gender">
+
+                        <option
+                            value="Male"
+                            <%= student.gender === "Male" ? "selected" : "" %>
+                        >
+                            Male
+                        </option>
+
+                        <option
+                            value="Female"
+                            <%= student.gender === "Female" ? "selected" : "" %>
+                        >
+                            Female
+                        </option>
+
+                        <option
+                            value="Other"
+                            <%= student.gender === "Other" ? "selected" : "" %>
+                        >
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>College</label>
+
+                    <input
+                        type="text"
+                        name="college"
+                        value="<%= student.college %>"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Course</label>
+
+                    <input
+                        type="text"
+                        name="course"
+                        value="<%= student.course %>"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-buttons">
+
+                <a href="/students">
+                    Cancel
+                </a>
+
+                <button type="submit">
+                    Update Student
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

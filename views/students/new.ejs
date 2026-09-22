@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Add Student</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>🏠 Smart PG</h2>
+
+    <a href="/">Dashboard</a>
+
+    <a class="active" href="/students">
+        👨‍🎓 Students
+    </a>
+
+    <a href="/rooms">🏠 Rooms</a>
+
+</div>
+
+
+<div class="main">
+
+    <div class="form-container">
+
+        <h1>Add New Student</h1>
+
+        <p>
+            Enter student information
+        </p>
+
+
+        <form
+            method="POST"
+            action="/students"
+        >
+
+            <div class="form-grid">
+
+
+                <div class="input-group">
+
+                    <label>Name</label>
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Enter student name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter email"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Phone</label>
+
+                    <input
+                        type="text"
+                        name="phone"
+                        placeholder="Enter phone number"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Gender</label>
+
+                    <select name="gender">
+
+                        <option value="Male">
+                            Male
+                        </option>
+
+                        <option value="Female">
+                            Female
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>College</label>
+
+                    <input
+                        type="text"
+                        name="college"
+                        placeholder="Enter college name"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Course</label>
+
+                    <input
+                        type="text"
+                        name="course"
+                        placeholder="B.Tech IT"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-buttons">
+
+                <a href="/students">
+                    Cancel
+                </a>
+
+                <button type="submit">
+                    Add Student
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

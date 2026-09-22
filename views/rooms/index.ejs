@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Rooms</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>🏠 Smart PG</h2>
+
+    <a href="/">Dashboard</a>
+
+    <a href="/students">
+        👨‍🎓 Students
+    </a>
+
+    <a class="active" href="/rooms">
+        🏠 Rooms
+    </a>
+
+</div>
+
+
+<div class="main">
+
+    <div class="page-header">
+
+        <div>
+
+            <h1>Rooms</h1>
+
+            <p>
+                Manage hostel rooms
+            </p>
+
+        </div>
+
+        <a
+            class="add-btn"
+            href="/rooms/new"
+        >
+            + Add Room
+        </a>
+
+    </div>
+
+
+    <div class="table-box">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Room Number</th>
+                    <th>Floor</th>
+                    <th>Type</th>
+                    <th>Capacity</th>
+                    <th>Rent</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <% rooms.forEach(room => { %>
+
+                <tr>
+
+                    <td>
+                        <%= room.room_id %>
+                    </td>
+
+                    <td>
+                        <strong>
+                            Room <%= room.room_number %>
+                        </strong>
+                    </td>
+
+                    <td>
+                        <%= room.floor %>
+                    </td>
+
+                    <td>
+                        <%= room.room_type %>
+                    </td>
+
+                    <td>
+                        <%= room.capacity %>
+                    </td>
+
+                    <td>
+                        ₹<%= room.rent %>
+                    </td>
+
+                    <td>
+
+                        <span class="status">
+                            <%= room.status %>
+                        </span>
+
+                    </td>
+
+                    <td class="actions">
+
+                        <a
+                            class="edit-btn"
+                            href="/rooms/<%= room.room_id %>/edit"
+                        >
+                            Edit
+                        </a>
+
+                        <form
+                            method="POST"
+                            action="/rooms/<%= room.room_id %>?_method=DELETE"
+                        >
+
+                            <button
+                                class="delete-btn"
+                                type="submit"
+                            >
+                                Delete
+                            </button>
+
+                        </form>
+
+                    </td>
+
+                </tr>
+
+                <% }) %>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

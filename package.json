@@ -1,0 +1,21 @@
+{
+  "name": "pg-hostel-management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "aap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "ejs-mate": "^4.0.0",
+    "express": "^5.2.1",
+    "method-override": "^3.0.0",
+    "mysql2": "^3.24.4",
+    "nodemon": "^3.1.14"
+  }
+}

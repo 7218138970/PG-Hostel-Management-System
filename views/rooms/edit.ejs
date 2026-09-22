@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Edit Room</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>🏠 Smart PG</h2>
+
+    <a href="/">Dashboard</a>
+
+    <a href="/students">
+        👨‍🎓 Students
+    </a>
+
+    <a class="active" href="/rooms">
+        🏠 Rooms
+    </a>
+
+</div>
+
+
+<div class="main">
+
+    <div class="form-container">
+
+        <h1>Edit Room</h1>
+
+        <p>
+            Update room details
+        </p>
+
+
+        <form
+            method="POST"
+            action="/rooms/<%= room.room_id %>?_method=PUT"
+        >
+
+            <div class="form-grid">
+
+
+                <div class="input-group">
+
+                    <label>Room Number</label>
+
+                    <input
+                        type="text"
+                        name="room_number"
+                        value="<%= room.room_number %>"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Floor</label>
+
+                    <input
+                        type="number"
+                        name="floor"
+                        value="<%= room.floor %>"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Room Type</label>
+
+                    <select name="room_type">
+
+                        <option
+                            value="Single Sharing"
+                            <%= room.room_type === "Single Sharing" ? "selected" : "" %>
+                        >
+                            Single Sharing
+                        </option>
+
+                        <option
+                            value="2 Sharing"
+                            <%= room.room_type === "2 Sharing" ? "selected" : "" %>
+                        >
+                            2 Sharing
+                        </option>
+
+                        <option
+                            value="3 Sharing"
+                            <%= room.room_type === "3 Sharing" ? "selected" : "" %>
+                        >
+                            3 Sharing
+                        </option>
+
+                        <option
+                            value="4 Sharing"
+                            <%= room.room_type === "4 Sharing" ? "selected" : "" %>
+                        >
+                            4 Sharing
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Capacity</label>
+
+                    <input
+                        type="number"
+                        name="capacity"
+                        value="<%= room.capacity %>"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Monthly Rent</label>
+
+                    <input
+                        type="number"
+                        name="rent"
+                        value="<%= room.rent %>"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Status</label>
+
+                    <select name="status">
+
+                        <option
+                            value="Available"
+                            <%= room.status === "Available" ? "selected" : "" %>
+                        >
+                            Available
+                        </option>
+
+                        <option
+                            value="Occupied"
+                            <%= room.status === "Occupied" ? "selected" : "" %>
+                        >
+                            Occupied
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-buttons">
+
+                <a href="/rooms">
+                    Cancel
+                </a>
+
+                <button type="submit">
+                    Update Room
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

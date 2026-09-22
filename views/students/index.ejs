@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Students</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>🏠 Smart PG</h2>
+
+    <a href="/">Dashboard</a>
+
+    <a class="active" href="/students">
+        👨‍🎓 Students
+    </a>
+
+    <a href="/rooms">🏠 Rooms</a>
+
+</div>
+
+
+<div class="main">
+
+    <div class="page-header">
+
+        <div>
+
+            <h1>Students</h1>
+
+            <p>
+                Manage all hostel residents
+            </p>
+
+        </div>
+
+        <a
+            class="add-btn"
+            href="/students/new"
+        >
+            + Add Student
+        </a>
+
+    </div>
+
+
+    <div class="table-box">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Gender</th>
+                    <th>College</th>
+                    <th>Course</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <% students.forEach(student => { %>
+
+                <tr>
+
+                    <td>
+                        <%= student.student_id %>
+                    </td>
+
+                    <td>
+                        <strong>
+                            <%= student.name %>
+                        </strong>
+                    </td>
+
+                    <td>
+                        <%= student.email %>
+                    </td>
+
+                    <td>
+                        <%= student.phone %>
+                    </td>
+
+                    <td>
+                        <%= student.gender %>
+                    </td>
+
+                    <td>
+                        <%= student.college %>
+                    </td>
+
+                    <td>
+                        <%= student.course %>
+                    </td>
+
+                    <td class="actions">
+
+                        <a
+                            class="edit-btn"
+                            href="/students/<%= student.student_id %>/edit"
+                        >
+                            Edit
+                        </a>
+
+
+                        <form
+                            method="POST"
+                            action="/students/<%= student.student_id %>?_method=DELETE"
+                        >
+
+                            <button
+                                class="delete-btn"
+                                type="submit"
+                            >
+                                Delete
+                            </button>
+
+                        </form>
+
+                    </td>
+
+                </tr>
+
+                <% }) %>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
